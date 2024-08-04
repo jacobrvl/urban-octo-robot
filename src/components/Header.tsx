@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import {Grid} from "@mui/material";
 import samsungLogo from "../assets/samsung_white.png";
+import StyledRainbowHeader from "./RainbowHeader.tsx";
 
 
 const StyledImage = styled.img`
@@ -8,6 +9,7 @@ const StyledImage = styled.img`
     position: absolute;
     top: 5px;
     transform: translateX(-50%);
+    z-index: 2;
 `;
 
 
@@ -17,9 +19,12 @@ const StyledLogoGrid = styled(Grid)`
 
 function Header() {
     return (
-        <StyledLogoGrid item>
-            <StyledImage src={samsungLogo} alt={"samsung logo"}/>
-        </StyledLogoGrid>
+        <>
+            <StyledRainbowHeader />
+            <StyledLogoGrid item>
+                <StyledImage src={samsungLogo} alt={"samsung logo"}/>
+            </StyledLogoGrid>
+        </>
     )
 }
 
