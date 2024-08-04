@@ -24,7 +24,7 @@ export type Product = {
     wtbOnlineDispFuncUseYN: null | string,
     product?: Product
 }
-type Model = {
+export type Model = {
     modelCode: string;
     shopSKU: string;
     modelName: string;
@@ -102,7 +102,7 @@ type Model = {
     vatFreePrice: null | string;
     vatFreePriceDisplay: null | string;
     monthlyPriceInfo: null | string;
-    topFlags: {
+    topFlags: null | {
         iconTypeCd: string;
         iconTitle: string;
     };
