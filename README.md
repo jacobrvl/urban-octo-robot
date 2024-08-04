@@ -24,7 +24,7 @@ The frameworks that are used in this project are:
 - MUI
 
 ## Notes
-- As it was pride weekend in Amsterdam I added a custom rainbow header.
+- As it was pride weekend in Amsterdam I added a custom rainbow header. (try hovering over it).
 
 ## Extensions
 To keep the assignment within the timeframe I have not implemented all that I wanted. I just wanted to note some extensions:
