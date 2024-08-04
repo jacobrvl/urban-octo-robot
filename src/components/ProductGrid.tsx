@@ -1,45 +1,14 @@
 import {useEffect, useState} from "react";
 import styled from "@emotion/styled";
-import {CircularProgress, Grid, Paper} from "@mui/material";
-
-
-type Product = {
-    awardList: never[];
-    categorySubTypeCode: string;
-    categorySubTypeEngName: string;
-    categorySubTypeName: string;
-    chipOptions: never[];
-    familyId: string;
-    familyRecord: string;
-    filterParamText: null | string;
-    fmyEngName: string;
-    fmyMarketingName: string;
-    iaCtaDisplay: string;
-    isRecommended: null | string;
-    localBenefitList: never[];
-    modelCount: string;
-    modelList: never[];
-    oldProductYN: string;
-    optionPriceUse: null | string;
-    productGroupId: string;
-    quickLooks: never[];
-    simplePdYN: string;
-    thirdPASeller: null | string;
-    wtbDispFuncUseYN: null | string;
-    wtbOnlineDispFuncUseYN: null | string;
-}
-
+import {CircularProgress, Grid} from "@mui/material";
+import {Product} from "../types/types.ts";
+import ProductFamilyCard from "./ProductFamilyCard.tsx";
 
 const CenteredCircularProgress = styled(CircularProgress)`
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-`;
-
-const StyledPaper = styled(Paper)`
-    height: 200px;
-    width: 200px
 `;
 
 function ProductGrid() {
@@ -77,15 +46,8 @@ function ProductGrid() {
     }
 
     return (
-        <Grid container item spacing={2}
-              justifyContent="center">
-        {products.map((product: Product) =>
-            (
-            <Grid item key={product.familyId}>
-                <StyledPaper/>
-            </Grid>
-            )
-        )}
+        <Grid container item spacing={2} justifyContent="center">
+        {products.map((product: Product) => <ProductFamilyCard product={product} key={product.familyId}/>)}
         </Grid>
   );
 }
