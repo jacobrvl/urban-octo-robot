@@ -1,30 +1,36 @@
-# React + TypeScript + Vite
+# Samsung Technical Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a technical assignment for Samsung. Based on [these instructions](https://docs.google.com/document/d/1GwcPe6PZwgDqxjMdfxQuAS1lmVIYTIbpDuZKA25TN8E/edit).
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instructions
+1. install the dependencies:
+    ```bash
+    npm install
+    ```
+2. Run the project:
+    ```bash
+    npm run dev
+    ```
 
-## Expanding the ESLint configuration
+## Tech
+The frameworks that are used in this project are:
+- React
+- Typescript
+- Vite
+- Vitest
+- EmotionJS
+  - I used EmotionJS for styling. It is very similar to styled-components.
+- MUI
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Notes
+- As it was pride weekend in Amsterdam I added a custom rainbow header.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Extensions
+To keep the assignment within the timeframe I have not implemented all that I wanted. I just wanted to note some extensions:
+- More tests
+- Show individual model pages per product family
+- Link to the samsung website for buying
+- Add a search bar
+- Add a filter for the products
+- Make the images in webp format, this will reduce the load time
